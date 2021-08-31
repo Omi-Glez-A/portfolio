@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omi G. A. Desarrollo Web</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .header-divs {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            padding: 1rem 0;
+        }
+
+        .social-icon {
+            width: 1.5rem;
+        }
+
+        #links-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .menu-principal li {
+            float: left;
+            padding: 0.5rem 1rem;
+        }
+
+        #navbar-menu a {
+            color: black;
+            font-weight: bold;
+        }
+
+        #navbar-menu a:hover {
+            color: #ff48ac;
+            background-color: #FFDE1D;
+        }
+
+        section {
+            padding: 7.5rem;
+        }
+
+        #landing {
+            height: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #content p {
+            font-size: 3rem;
+        }
+
+        .cta {
+            display: flex;
+        }
+
+        .cta a {
+            display: block;
+            margin: 2rem 1rem;
+            padding: 0.8rem 1rem;
+            background-color: #ff48ac;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        .cta a:hover {
+            background-color: #FFDE1D;
+
+        }
+
+        #about {
+            background-color: #FFDE1D;
+        }
+
+        #about h2 {
+            color: #ff48ac;
+            font-size: 2rem;
+        }
+
+        #abt1,
+        #abt2 {
+            display: flex;
+            width: 100%;
+            padding: 1rem;
+            justify-content: space-around;
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
+        #selfie {
+            width: 90%;
+            border-radius: 50%;
+            margin-left: 5em;
+        }
+
+        .div-izq {
+            width: 40%;
+        }
+
+        .div-der {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #work {
+            background-color: #ff48ac;
+            position: inherit;
+            display: flex;
+        }
+
+        #work h2 {
+            color: #FFDE1D;
+            font-size: 2rem;
+        }
+
+        #work-gallery {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .gallery {
+            width: 500px;
+            height: auto;
+            padding: 1rem;
+        }
+
+        #contact {
+            position: inherit;
+            display: flex;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+        }
+
+        #c {
+            color: #ff48ac;
+        }
+
+        #o {
+            color: #FFDE1D;
+        }
+
+        #cntct-content {
+            display: flex;
+        }
+
+        .formu {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            padding: 0.5rem;
+        }
+
+        #contact-info {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+
+        .element-contact-info {
+            margin: 0.5rem;
+        }
+
+        #contact-social ul {
+            padding: 0;
+        }
+
+        #contact-social li {
+            display: inline-block;
+            padding: 0 0.2rem;
+        }
+
+        footer {
+            background-color: #333333;
+            color: white;
+        }
+
+        .li-ftr {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff48ac;
+        }
+
+        footer a:hover {
+            color: #FFDE1D;
+            font-weight: bold;
+        }
+
+        .footer-principal {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-top: 2rem;
+
+        }
+
+        .footer-footer-divs {
+            padding: 2rem;
+        }
+
+        .footer-footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width:860px) {
+
+            nav,
+            #abt1,
+            #abt2,
+            .div-der,
+            #contact,
+            #cntct-content,
+            #work,
+            .footer-principal,
+            .footer-footer {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .header-divs,
+            .div-izq,
+            .div-der {
+                width: 100%;
+                justify-content: center;
+            }
+        
+
+            #contact-info {
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .footer-principal-divs,
+            .footer-footer {
+                margin: auto;
+                text-align: center;
+            }
+
+
+        }
+
+        @media (max-width: 520px) {
+
+            header {
+                position: relative;
+            }
+
+            .logo {
+                height: 50px;
+                width: auto;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 4rem;
+            }
+
+            #content p {
+                font-size: 2rem;
+            }
+
+            .gallery {
+                width: 100%;
+                height: auto;
+                padding: 0.5rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header-divs">
+                <a href="#landing"><img src="img/logo.png" alt="logo o entre llaves" class="logo"></a>
+                <h1 id="titulo">Omi Glez. A.</h1>
+            </div>
+            <div class="social-header" id="links-header">
+                <div id="header-social">
+                    <ul id="navbar-social" class="menu-principal">
+                        <li id="navbar-twitter"><a href="#"><img src="img/twitter.svg" alt="mi twitter"
+                                    class="social-icon"></a></li>
+                        <li id="navbar-insta"><a href="#"><img src="img/instagram.svg" alt="mi instagram"
+                                    class="social-icon"></a></li>
+                        <li id="navbar-github"><a href="#"><img src="img/github.svg" alt="mi github"
+                                    class="social-icon"></a></li>
+                    </ul>
+                </div>
+                <div id="header-menu">
+                    <ul id="navbar-menu" class="menu-principal">
+                        <li id="link-landing"><a href="#landing">INICIO</a></li>
+                        <li id="link-about"><a href="#about">SOBRE MÍ</a></li>
+                        <li id="link-work"><a href="#work">PORTFOLIO</a></li>
+                        <li id="link-contact"><a href="#contact">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="landing">
+            <div id="content">
+                <p>Hola, me llamo Omi. Me dedico al <br>desarrollo web en entorno cliente <br>y vivo en
+                    Palma de Mallorca.</p>
+                <div class="cta" id="div-btns-landing">
+                    <div class="btn-landing" id="btn-work"><a href="#work">mira mi trabajo</a></div>
+                    <div class="btn-landing" id="btn-about"><a href="#about">más sobre mí</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="div-section-container" id="abt1">
+                <div class="div-izq" id="text">
+                    <h2 id="abt-h2">Sobre mí</h2>
+                    <p>Soy Omi González Amengual y vivo en Palma de Mallorca.
+                        Después de obtener el título de Grado Superior en Iluminación e Imagen y casi 8 años gestionando
+                        una pequeña y acogedora tienda de té, decidí quitarme una espina que tenía clavada
+                        desde los 11 años cuando me entretenía dibujando figuras geométricas a través de código con mi
+                        MSX.
+                        He tanteado Arduino y el IoT, y también hice una introducción a Python. Sin embargo, lo que más
+                        me ha
+                        gustado es la maquetación y construcción de pàginas web. Por eso
+                        estoy profundizando en el desarrollo web en entorno cliente, haciendo hincapié en el tema de la
+                        accesibilidad: un diseño adaptativo (responsive) para poder disfrutar de una mejor experiencia
+                        de usuario desde cualquier dispositivo es esencial; y si además podemos facilitar la navegación
+                        y que
+                        toda la diversidad de personas ejerza su derecho al acceso a la
+                        web y a la información… ¡mucho mejor!</p>
+                </div>
+                <div class="div-der" id="about-img">
+                    <img src="img/selfie.png" alt="selfie mirando a la cara y sonriendo" id="selfie">
+                </div>
+            </div>
+            <div id="abt2">
+                <div id="skills">
+                    <h3>Conocimientos</h3>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript.</li>
+                        <li>Visual Studio Code, Wordpress, Bootstrap, Git.</li>
+                        <li>Gimp, Adobe Photoshop, Adobe Lightroom.</li>
+                        <li>Audacity.</li>
+                    </ul>
+                </div>
+                <div id="tools">
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>Visual Studio Code, Wordpress, Bootstrap.</li>
+                        <li>Gimp, Figma, Canva.</li>
+                        <li>Audacity.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="div-izq">
+                <h2 id="work-h2">Portfolio</h2>
+            </div>
+            <div id="work-gallery">
+                <img class="gallery" src="img/calculadora.png" alt="captura de pantalla proyecto calculadora">
+                <img class="gallery" src="img/lista-compra.png" alt="captura de pantalla proyecto lista de la compra">
+                <img class="gallery" src="img/cambiar-propiedad-css.png"
+                    alt="captura de pantalla trabajo DOM cambiar de propiedades css">
+                <img class="gallery" src="img/animales.png" alt="captura de pantalla proyecto animales">
+            </div>
+        </section>
+
+        <section id="contact">
+            <div id="titulo-contact">
+                <h2 id="cntct-h2"><span id="c">C</span>ontact<span id="o">o</span></h2>
+            </div>
+            <div id="cntct-content">
+                <div id="formulario">
+                    <form action="mailto: omigonzalezamengual@gmail.com">
+                        <div class="formu">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="" id="name">
+                        </div>
+                        <div class="formu">
+                            <label for="mail">E-mail</label>
+                            <input type="email" name="" id="mail">
+                        </div>
+                        <div class="formu">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea name="" id="mensaje" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="formu">
+                            <input type="submit" value="contacta conmigo">    
+                        </div>
+                    </form>
+                </div>
+                <div id="franja"></div>
+                <div id="contact-info">
+                    <p class="element-contact-info">omigonzalezamengual@gmail.com</p>
+                    <p class="element-contact-info">+34 677 650 812</p>
+                    <div class="element-contact-info" id="contact-social">
+                        <ul>
+                            <li id="navbar-twitter"><a href="#"><img src="img/twitter.svg" alt="mi twitter"
+                                        class="social-icon"></a></li>
+                            <li id="navbar-insta"><a href="#"><img src="img/instagram.svg" alt="mi instagram"
+                                        class="social-icon"></a></li>
+                            <li id="navbar-github"><a href="#"><img src="img/github.svg" alt="mi github"
+                                        class="social-icon"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-principal">
+            <div class="footer-principal-divs" id="footer-logo">
+                <img src="img/logo_footer.png" alt="logo o entre llaves" class="logo">
+            </div>
+            <div class="footer-principal-divs" id="mini-abt">
+                <p class="ftr-mini-abt">Omi González Amengual.<br>Desarrollo web. Maquetación y construcción
+                    de páginas web.<br>Palma de Mallorca. </p>
+            </div>
+            <div class="footer-principal-divs">
+                <ul id="footer-menu">
+                    <li class="li-ftr" id="ftr-link-landing"><a href="#landing">INICIO</a></li>
+                    <li class="li-ftr" id="ftr-link-about"><a href="#about">SOBRE MÍ</a></li>
+                    <li class="li-ftr" id="ftr-link-work"><a href="#work">PORTFOLIO</a></li>
+                    <li class="li-ftr" id="ftr-link-contact"><a href="#contact">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <div class="footer-footer-divs" id="flaticon">Icons made by <a
+                    href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div class="footer-footer-divs" id="copyright">Omi Glez. A. 2021</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
