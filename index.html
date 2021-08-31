@@ -24,7 +24,7 @@
         nav {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             padding: 1rem;
         }
 
@@ -81,15 +81,15 @@
             background-color: #FFDE1D;
         }
 
-        section {
+        #about, #work, #contact {
             padding: 7.5rem;
         }
 
         #landing {
-            height: 50vw;
+            height: 70vw;
             display: flex;
             justify-content: center;
-            align-items: center;
+            padding-top: 200px;
         }
 
         #content p {
@@ -136,7 +136,7 @@
         #selfie {
             width: 90%;
             border-radius: 50%;
-            margin-left: 5em;
+            margin-left: 4em;
         }
 
         .div-izq {
@@ -147,7 +147,7 @@
             width: 60%;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: baseline;
         }
 
         #work {
@@ -256,13 +256,7 @@
         }
 
         @media (max-width:860px) {
-            
-             header {
-                position: relative;
-            }
 
-
-            nav,
             #abt1,
             #abt2,
             .div-der,
@@ -275,13 +269,30 @@
                 justify-content: center;
             }
 
-            .header-divs,
+            .logo {
+                height: 50px;
+                width: auto;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .menu-principal li {
+
+                padding: 0.5rem 0.5rem;
+            }
+
+            .header-divs {
+                justify-content: left;
+            }
+
             .div-izq,
             .div-der {
                 width: 100%;
                 justify-content: center;
             }
-        
+
 
             #contact-info {
                 text-align: center;
@@ -297,24 +308,30 @@
 
         }
 
-        @media (max-width: 520px) {
+        @media (max-width: 590px) {
 
-           
-            .logo {
-                height: 50px;
-                width: auto;
+
+            header {
+                position: relative;
             }
 
-            h1 {
-                font-size: 2rem;
-            }
+            nav {
+                flex-direction: column;
+            }         
 
-            section {
-                padding: 4rem;
+            #landing {
+                height: 50vh;
+                padding: 50px 20px;
+                
             }
 
             #content p {
                 font-size: 2rem;
+            }
+
+            #about {
+                padding: 2rem;
+                
             }
 
             .gallery {
@@ -338,8 +355,6 @@
                 <div id="header-social">
                     <ul id="navbar-social" class="menu-principal">
                         <li id="navbar-twitter"><a href="#"><img src="img/twitter.svg" alt="mi twitter"
-                                    class="social-icon"></a></li>
-                        <li id="navbar-insta"><a href="#"><img src="img/instagram.svg" alt="mi instagram"
                                     class="social-icon"></a></li>
                         <li id="navbar-github"><a href="#"><img src="img/github.svg" alt="mi github"
                                     class="social-icon"></a></li>
@@ -448,7 +463,7 @@
                             <textarea name="" id="mensaje" cols="30" rows="10"></textarea>
                         </div>
                         <div class="formu">
-                            <input type="submit" value="contacta conmigo">    
+                            <input type="submit" value="contacta conmigo">
                         </div>
                     </form>
                 </div>
@@ -459,8 +474,6 @@
                     <div class="element-contact-info" id="contact-social">
                         <ul>
                             <li id="navbar-twitter"><a href="#"><img src="img/twitter.svg" alt="mi twitter"
-                                        class="social-icon"></a></li>
-                            <li id="navbar-insta"><a href="#"><img src="img/instagram.svg" alt="mi instagram"
                                         class="social-icon"></a></li>
                             <li id="navbar-github"><a href="#"><img src="img/github.svg" alt="mi github"
                                         class="social-icon"></a></li>
@@ -494,7 +507,8 @@
         <div class="footer-footer">
             <div class="footer-footer-divs" id="flaticon">Icons made by <a
                     href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
             <div class="footer-footer-divs" id="copyright">Omi Glez. A. 2021</div>
         </div>
     </footer>
