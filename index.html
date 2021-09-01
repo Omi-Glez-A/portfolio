@@ -19,6 +19,7 @@
             overflow: hidden;
             position: sticky;
             top: 0;
+            z-index: 1;
         }
 
         nav {
@@ -81,7 +82,9 @@
             background-color: #FFDE1D;
         }
 
-        #about, #work, #contact {
+        #about,
+        #work,
+        #contact {
             padding: 7.5rem;
         }
 
@@ -98,21 +101,19 @@
 
         .cta {
             display: flex;
-            font-weight: bold;
         }
 
         .cta a {
             display: block;
             margin: 2rem 1rem;
             padding: 0.8rem 1rem;
-            background-color: #FFDE1D;
+            background-color: #ff48ac;
             border-radius: 10px;
             text-decoration: none;
-           
         }
 
         .cta a:hover {
-            background-color: #ff48ac;
+            background-color: #FFDE1D;
 
         }
 
@@ -169,12 +170,50 @@
 
         }
 
-        .gallery {
+        .gallery {            
+            position: relative;
             width: 500px;
             height: auto;
-            padding: 1rem;
+            
         }
 
+        .gallery img {
+            padding: 1.5rem;
+            width: 500px;
+            height: auto;
+            
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+            background-color: #ff48add7;
+        }
+
+        .overlay p {
+            color: black;
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 2rem;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .gallery:hover .overlay {
+            width: 100%;
+           
+        }
+
+    
         #contact {
             position: inherit;
             display: flex;
@@ -319,12 +358,12 @@
 
             nav {
                 flex-direction: column;
-            }         
+            }
 
             #landing {
                 height: 50vh;
                 padding: 50px 20px;
-                
+
             }
 
             #content p {
@@ -333,10 +372,10 @@
 
             #about {
                 padding: 2rem;
-                
+
             }
 
-            .gallery {
+            .gallery img {
                 width: 100%;
                 height: auto;
                 padding: 0.5rem;
@@ -358,8 +397,8 @@
                     <ul id="navbar-social" class="menu-principal">
                         <li id="navbar-twitter"><a href="#"><img src="img/twitter.svg" alt="mi twitter"
                                     class="social-icon"></a></li>
-                        <li id="navbar-github"><a href="#"><img src="img/github.svg" alt="mi github"
-                                    class="social-icon"></a></li>
+                        <li id="navbar-github"><a href="https://github.com/Omi-Glez-A"><img src="img/github.svg"
+                                    alt="mi github" class="social-icon"></a></li>
                     </ul>
                 </div>
                 <div id="header-menu">
@@ -437,11 +476,34 @@
                 <h2 id="work-h2">Portfolio</h2>
             </div>
             <div id="work-gallery">
-                <img class="gallery" src="img/calculadora.png" alt="captura de pantalla proyecto calculadora">
-                <img class="gallery" src="img/lista-compra.png" alt="captura de pantalla proyecto lista de la compra">
-                <img class="gallery" src="img/cambiar-propiedad-css.png"
-                    alt="captura de pantalla trabajo DOM cambiar de propiedades css">
-                <img class="gallery" src="img/animales.png" alt="captura de pantalla proyecto animales">
+                <div class="gallery">
+                    <img src="img/calculadora.png" alt="captura de pantalla proyecto calculadora">
+                    <div class="overlay">
+                        <p>Ejercicio crear una calculadora funcional. HTML5, CSS3, JS.</p>
+                      
+                    </div>
+                </div>
+                <div class="gallery">
+                    <img src="img/lista-compra.png" alt="captura de pantalla proyecto lista de la compra">
+                    <div class="overlay">
+                        <p>Ejercicio lista de la compra añadiendo y/o eliminando elementos. HTML5, CSS3, JS.</p>                       
+                    </div>             
+                </div>
+                <div class="gallery">
+                    <img src="img/cambiar-propiedad-css.png"
+                        alt="captura de pantalla trabajo DOM cambiar de propiedades css">
+                    <div class="overlay">
+                        <p>Ejercicio cambio de propiedades del CSS con el DOM. HTML5, CSS3, JS.</p>
+                      
+                    </div>
+                </div>
+                <div class="gallery">
+                    <img src="img/animales.png" alt="captura de pantalla proyecto animales">
+                    <div class="overlay">
+                        <p>Ejercicio tarjetas sonoras de animales. HTML5, CSS3, JS.</p>
+                                      
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -451,7 +513,7 @@
             </div>
             <div id="cntct-content">
                 <div id="formulario">
-                    <form action="mailto:omigonzalezamengual@gmail.com">
+                    <form action="mailto: omigonzalezamengual@gmail.com">
                         <div class="formu">
                             <label for="name">Nombre</label>
                             <input type="text" name="nombre" id="name">
@@ -477,8 +539,8 @@
                         <ul>
                             <li id="contact-twitter"><a href="#"><img src="img/twitter.svg" alt="mi twitter"
                                         class="social-icon"></a></li>
-                            <li id="contact-github"><a href="#"><img src="img/github.svg" alt="mi github"
-                                        class="social-icon"></a></li>
+                            <li id="contact-github"><a href="https://github.com/Omi-Glez-A"><img src="img/github.svg"
+                                        alt="mi github" class="social-icon"></a></li>
                         </ul>
                     </div>
                 </div>
